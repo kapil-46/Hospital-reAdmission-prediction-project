@@ -1,4 +1,8 @@
 {
+   "engines":{
+    "node" :"22.13.1",
+    "python":"3.7.2"
+  },
   "name": "hospital-readmission-app",
   "version": "1.0.0",
   "main": "index.js",
