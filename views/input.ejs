@@ -1,0 +1,179 @@
+<%- include('partials/header'); %>
+
+<h2>Enter Patient Information</h2>
+<form action="/patients/input" method="POST" class="row g-3">
+  <!-- Age -->
+  <div class="col-md-4">
+    <label for="age" class="form-label">Age Group</label>
+    <select id="age" name="age" class="form-select" required>
+      <option value="">Select...</option>
+      <option value="[0-10]">0-10</option>
+      <option value="[10-20]">10-20</option>
+      <option value="[20-30]">20-30</option>
+      <option value="[30-40]">30-40</option>
+      <option value="[40-50]">40-50</option>
+      <option value="[50-60]">50-60</option>
+      <option value="[60-70]">60-70</option>
+      <option value="[70-80]">70-80</option>
+      <option value="[80-90]">80-90</option>
+      <option value="[90-100]">90-100</option>
+    </select>
+  </div>
+
+  <!-- Time in Hospital -->
+  <div class="col-md-4">
+    <label for="time_in_hospital" class="form-label">Time in Hospital (days)</label>
+    <input type="number" min="0" id="time_in_hospital" name="time_in_hospital" class="form-control" required />
+  </div>
+
+  <!-- Number of Lab Procedures -->
+  <div class="col-md-4">
+    <label for="n_lab_procedures" class="form-label">Number of Lab Procedures</label>
+    <input type="number" min="0" id="n_lab_procedures" name="n_lab_procedures" class="form-control" required />
+  </div>
+
+  <!-- Number of Procedures -->
+  <div class="col-md-4">
+    <label for="n_procedures" class="form-label">Number of Procedures</label>
+    <input type="number" min="0" id="n_procedures" name="n_procedures" class="form-control" required />
+  </div>
+
+  <!-- Number of Medications -->
+  <div class="col-md-4">
+    <label for="n_medications" class="form-label">Number of Medications</label>
+    <input type="number" min="0" id="n_medications" name="n_medications" class="form-control" required />
+  </div>
+
+  <!-- Number of Outpatient Visits -->
+  <div class="col-md-4">
+    <label for="n_outpatient" class="form-label">Number of Outpatient Visits</label>
+    <input type="number" min="0" id="n_outpatient" name="n_outpatient" class="form-control" required />
+  </div>
+
+  <!-- Number of Inpatient Visits -->
+  <div class="col-md-4">
+    <label for="n_inpatient" class="form-label">Number of Inpatient Visits</label>
+    <input type="number" min="0" id="n_inpatient" name="n_inpatient" class="form-control" required />
+  </div>
+
+  <!-- Number of Emergency Visits -->
+  <div class="col-md-4">
+    <label for="n_emergency" class="form-label">Number of Emergency Visits</label>
+    <input type="number" min="0" id="n_emergency" name="n_emergency" class="form-control" required />
+  </div>
+
+  <!-- Medical Specialty -->
+  <div class="col-md-4">
+    <label for="medical_specialty" class="form-label">Medical Specialty</label>
+    <!-- <input type="text" id="medical_specialty" name="medical_specialty" class="form-control" /> -->
+     <select id="medical_specialty" name="medical_specialty" class="form-select" required>
+      <option value="">Select</option>
+      <option value="Surgery">Surgery</option>
+      <option value="Cardiology">Cardiology</option>
+      <option value="GeneralPratice">GeneralPratice</option>
+      <option value="InternalMedicine">InternalMedicine</option>
+      <option value="Trauma">Trauma</option>
+      <option value="Emergency">Emergency</option>
+      <option value="Missing">Missing</option>
+      
+    </select>
+
+  </div>
+
+  <!-- Common Diagnoses -->
+  <div class="col-md-4">
+    <label for="diag_1" class="form-label">Primary Diagnosis (diag_1)</label>
+    <!-- <input type="text" id="diag_1" name="diag_1" class="form-control" /> -->
+
+    <select id="diag_1" name="diag_1" class="form-select" required>
+      <option value="">Select</option>
+      <option value="Circulatory">Circulatory</option>
+      <option value="Injury">Injury</option>
+      <option value="Digestive">Digestive</option>
+      <option value="Respiratory">Respiratory</option>
+      <option value="Diabetes">Diabetes</option>
+      <option value="Musculoskeletal">Musculoskeletal</option>
+      <option value="Missing">Missing</option>
+      <option value="Other">Other</option>
+    </select>
+  </div>
+
+  <div class="col-md-4">
+    <label for="diag_2" class="form-label">Secondary Diagnosis (diag_2)</label>
+    <!-- <input type="text" id="diag_2" name="diag_2" class="form-control" /> -->
+     <select id="diag_2" name="diag_2" class="form-select" required>
+      <option value="">Select</option>
+      <option value="Circulatory">Circulatory</option>
+      <option value="Injury">Injury</option>
+      <option value="Digestive">Digestive</option>
+      <option value="Respiratory">Respiratory</option>
+      <option value="Diabetes">Diabetes</option>
+      <option value="Musculoskeletal">Musculoskeletal</option>
+      <option value="Missing">Missing</option>
+      <option value="Other">Other</option>
+    </select>
+  </div>
+
+  <div class="col-md-4">
+    <label for="diag_3" class="form-label">Tertiary Diagnosis (diag_3)</label>
+    <!-- <input type="text" id="diag_3" name="diag_3" class="form-control" /> -->
+     <select id="diag_3" name="diag_3" class="form-select" required>
+      <option value="">Select</option>
+      <option value="Circulatory">Circulatory</option>
+      <option value="Injury">Injury</option>
+      <option value="Digestive">Digestive</option>
+      <option value="Respiratory">Respiratory</option>
+      <option value="Diabetes">Diabetes</option>
+      <option value="Musculoskeletal">Musculoskeletal</option>
+      <option value="Missing">Missing</option>
+      <option value="Other">Other</option>
+    </select>
+  </div>
+
+  <!-- Glucose Test -->
+  <div class="col-md-4">
+    <label for="glucose_test" class="form-label">Glucose Test? (yes/no)</label>
+    <select id="glucose_test" name="glucose_test" class="form-select" required>
+      <option value="">Select...</option>
+      <option value="yes">yes</option>
+      <option value="no">no</option>
+    </select>
+  </div>
+
+  <!-- A1C Test -->
+  <div class="col-md-4">
+    <label for="A1Ctest" class="form-label">A1C Test</label>
+    <select id="A1Ctest" name="A1Ctest" class="form-select" required>
+      <option value="">Select...</option>
+      <option value="no">no</option>
+      <option value="normal">normal</option>
+      <option value="high">high</option>
+    </select>
+  </div>
+
+  <!-- Change in Medication -->
+  <div class="col-md-4">
+    <label for="change" class="form-label">Change in Medication? (yes/no)</label>
+    <select id="change" name="change" class="form-select" required>
+      <option value="">Select...</option>
+      <option value="yes">yes</option>
+      <option value="no">no</option>
+    </select>
+  </div>
+
+  <!-- Diabetes Medication -->
+  <div class="col-md-4">
+    <label for="diabetes_med" class="form-label">Diabetes Medication? (yes/no)</label>
+    <select id="diabetes_med" name="diabetes_med" class="form-select" required>
+      <option value="">Select...</option>
+      <option value="yes">yes</option>
+      <option value="no">no</option>
+    </select>
+  </div>
+
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary mt-3">Predict Readmission</button>
+  </div>
+</form>
+
+<%- include('partials/footer'); %>

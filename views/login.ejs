@@ -1,0 +1,45 @@
+
+<%- include('partials/header'); %>
+<div class="row mt-3">
+        <div class="col-8 offset-2">
+                  <h3>Login </h3>
+
+            
+     <form method="post" action="/login" novalidate class="needs-validation">
+
+        <div class="mb-3">
+        <label for="username" class="form-label">Username</label>    
+    <input  id="username" type="text" name="username" class="form-control" required>
+
+    
+      
+    </div>
+
+
+    
+    
+
+<div class="mb-3">
+        <label for="password" class="form-label">Password</label> 
+        <div class="input-group"> 
+    <input  id="password" type="password" name="password" class="form-control"
+    minlength="8"
+    pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$"
+        aria-describedby="passwordHelpBlock"
+    required>
+  <button class="btn btn-outline-secondary" type="button" id="togglePassword">Show</button>
+  </div>  
+   <div id="passwordHelpBlock" class="form-text">
+    Password must be at least 8 characters, contain one uppercase letter, one number, and one special character.
+      </div>
+     </div>
+ 
+
+    <button class="btn btn-primary mt-3">Login</button>
+
+     </form>
+
+
+    </div>
+    </div>
+      <%- include('partials/footer'); %>

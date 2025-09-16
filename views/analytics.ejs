@@ -1,0 +1,99 @@
+<%- include('partials/header'); %>
+
+<!-- <h2>Analytics Dashboard</h2>
+
+<p>This page will display usage stats and prediction trends.</p>
+
+<div class="row">
+  <div class="col-md-6">
+    <canvas id="predictionChart"></canvas>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  const ctx = document.getElementById('predictionChart').getContext('2d');
+  const predictionChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['High Risk', 'Low Risk'],
+      datasets: [{
+        label: 'Number of Predictions',
+        data: [12, 19], // Placeholder data, replace with real counts
+        backgroundColor: ['rgba(255, 99, 132, 0.7)', 'rgba(54, 162, 235, 0.7)'],
+        borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)'],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: { beginAtZero: true }
+      }
+    }
+  });
+</script> -->
+
+
+<div class="container mt-5 nj">
+  <h2 class="mb-2 text-start">Analytics Dashboard</h2>
+  <h6 class="mb-2 text-start">This page will display usage stats and prediction trends.</h6>
+    <div class="row g-4 mt-1">
+  <div class="col-md-3 ">
+    <div class="kpi-card kpi1 ">
+      <div class="kpi-label">
+        <i class="bi bi-clipboard-data"></i> Total Assessments
+      </div>
+      <div class="kpi-big"><%= total %></div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="kpi-card kpi2">
+      <div class="kpi-label">
+        <i class="bi bi-exclamation-triangle"></i> High Risk Cases
+      </div>
+      <div class="kpi-big "><%= highRisk %></div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="kpi-card kpi3">
+      <div class="kpi-label">
+        <i class="bi bi-bar-chart-line-fill"></i> New This Month
+      </div>
+      <div class="kpi-big"><%= newThisMonth %></div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="kpi-card kpi1">
+      <div class="kpi-label mt-1">
+        <i class="bi bi-bullseye"></i> Model Accuracy
+      </div>
+      <div class="kpi-big"><%= accuracy %>%</div>
+    </div>
+  </div>
+</div>
+
+
+
+ <div class="row mt-5 g-4">
+      <div class="col-md-6 pi">
+        <h5>Live Risk Distribution</h5>
+        <canvas id="riskPieChart"></canvas>
+      </div>
+      <div class="col-md-6">
+        <h5>Live Readmission Trends (last 30 days)</h5>
+        <canvas id="readmissionTrendChart"></canvas>
+      </div>
+    </div>
+
+
+</div>
+
+<script id="riskData" type="application/json"><%- JSON.stringify(riskLevels) %></script>
+<script id="trendsData" type="application/json"><%- JSON.stringify(trends) %></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="/js/scripts.js"></script>
+
+
+<%- include('partials/footer'); %>

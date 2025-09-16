@@ -1,0 +1,140 @@
+<%- include('partials/header'); %>
+
+<h2>Frequently Asked Questions (FAQs)</h2>
+
+
+
+  <div class="accordion" id="faqAccordion">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+        What is hospital readmission?
+      </button>
+    </h2>
+    <div id="faq1" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+        Hospital readmission refers to a patient being admitted to a hospital within a certain period after being discharged.
+      </div>
+    </div>
+  </div>
+  
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+        How does this app predict readmission risk?
+      </button>
+    </h2>
+    <div id="faq2" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+        The app uses patient data and a machine learning model to classify patients as high or low risk for readmission.
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+        What patient information is required?
+      </button>
+    </h2>
+    <div id="faq3" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+        The app requires clinical and demographic data such as age, medical history, lab results, procedures, and discharge details.
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingFour">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+        What time periods define 'readmission'?
+      </button>
+    </h2>
+    <div id="faq4" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+        Most hospital readmission models focus on readmissions occurring within 30 days of discharge, but other intervals may be used.
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingFive">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
+        How accurate are the predictions?
+      </button>
+    </h2>
+    <div id="faq5" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+        Prediction accuracy depends on model quality and data; our app uses recent machine learning techniques with proven reliability.
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingSix">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6" aria-expanded="false" aria-controls="faq6">
+        Can patients reduce their risk of readmission?
+      </button>
+    </h2>
+    <div id="faq6" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+        Yes. Following proper discharge instructions, medication adherence, and attending follow-up appointments can reduce risk.
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingSeven">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7" aria-expanded="false" aria-controls="faq7">
+        Who can see my prediction results?
+      </button>
+    </h2>
+    <div id="faq7" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+        Prediction results are confidential and visible only to authorized medical staff and the patient, if applicable.
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingEight">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq8" aria-expanded="false" aria-controls="faq8">
+        Is the app approved for clinical use?
+      </button>
+    </h2>
+    <div id="faq8" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+        This app is designed for informational purposes and research support; final clinical decisions should be made by healthcare professionals.
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingNine">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq9" aria-expanded="false" aria-controls="faq9">
+        How can I improve my prediction accuracy?
+      </button>
+    </h2>
+    <div id="faq9" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+        Ensure thorough and accurate input of all required patient information; complete records lead to better predictions.
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTen">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq10" aria-expanded="false" aria-controls="faq10">
+        Where can I get more help or report an issue?
+      </button>
+    </h2>
+    <div id="faq10" class="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+        Please use the Contact page on this site to reach support or report any issues with the app.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<%- include('partials/footer'); %>
